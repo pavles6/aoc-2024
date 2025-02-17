@@ -28,5 +28,4 @@ func main() {
 	solutions.SolutionDay23()
 	solutions.SolutionDay24()
 	solutions.SolutionDay25()
-
 }
