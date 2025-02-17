@@ -12,6 +12,10 @@ func SolutionDay1() {
 
 	var totalDistance uint32
 
+	var similarityScore uint32
+
+	var occurenceMap = make(map[uint32]uint32)
+
 	for _, line := range strings.Split(input, "\n") {
 		pair := strings.Fields(line)
 
@@ -47,7 +51,25 @@ func SolutionDay1() {
 		totalDistance += distance
 	}
 
+	for _, left := range leftList {
+		occurenceMap[left] = 0
+	}
+
+	for _, right := range rightList {
+		count, exists := occurenceMap[right]
+
+		if exists {
+			occurenceMap[right] = count + 1
+		}
+	}
+
+	for n, count := range occurenceMap {
+		similarityScore += n * count
+	}
+
 	fmt.Println(totalDistance)
+
+	fmt.Println(similarityScore)
 }
 
 var input = `64256   78813
