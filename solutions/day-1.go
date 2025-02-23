@@ -16,7 +16,7 @@ func SolutionDay1() {
 
 	var occurenceMap = make(map[uint32]uint32)
 
-	for _, line := range strings.Split(input, "\n") {
+	for line := range strings.SplitSeq(input, "\n") {
 		pair := strings.Fields(line)
 
 		left, err := strconv.ParseUint(pair[0], 10, 32)
@@ -36,7 +36,7 @@ func SolutionDay1() {
 	slices.Sort(leftList)
 	slices.Sort(rightList)
 
-	for i := 0; i < len(leftList); i++ {
+	for i := range leftList {
 		left := leftList[i]
 		right := rightList[i]
 
