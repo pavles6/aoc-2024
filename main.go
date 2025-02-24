@@ -3,8 +3,8 @@ package main
 import "github.com/pavles6/aoc-2024/solutions"
 
 func main() {
-	solutions.SolutionDay1()
-	// solutions.SolutionDay2()
+	// solutions.SolutionDay1()
+	solutions.SolutionDay2()
 	// solutions.SolutionDay3()
 	// solutions.SolutionDay4()
 	// solutions.SolutionDay5()

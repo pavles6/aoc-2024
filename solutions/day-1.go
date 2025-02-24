@@ -16,7 +16,7 @@ func SolutionDay1() {
 
 	var occurenceMap = make(map[uint32]uint32)
 
-	for line := range strings.SplitSeq(input, "\n") {
+	for line := range strings.SplitSeq(day1Input, "\n") {
 		pair := strings.Fields(line)
 
 		left, err := strconv.ParseUint(pair[0], 10, 32)
@@ -72,7 +72,7 @@ func SolutionDay1() {
 	fmt.Println(similarityScore)
 }
 
-var input = `64256   78813
+var day1Input = `64256   78813
 46941   56838
 47111   50531
 48819   41511
